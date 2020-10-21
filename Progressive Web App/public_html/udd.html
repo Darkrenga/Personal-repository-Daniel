@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Min første progressive web app">
+    <meta name="theme-color" content="white">
+    <meta charset="UTF-8">
+    <title>Min PWA side</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/img/icon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/script.js"></script>
+
+    <style>
+        .theClasses{
+            padding: 10px;
+            margin: 5px 0;
+        }
+        /*Classes or Id's that needs to be inline block
+        add them at the end with and /Enter/ and ,
+        **/
+        .edjucation-name,
+        .dropdownTriangle{
+            display: inline-block;
+        }
+        .theClasses img{
+            width: 20px;
+        }
+
+        .dropdownTriangle{
+            float: right;
+            margin-right: 5px;
+            transform: rotate(180deg);
+        }
+        
+        .upcomming{
+
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin: 5px auto;
+            padding: 5px;
+            border: black solid 1px;
+        }
+        .room-upcomming{
+            grid-column: 1/2;
+        }
+        .time-upcomming{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .subjectName-upcomming{
+            grid-column: 3/5;
+            grid-row: 1/3;
+        }
+        #web-upcomming,
+        #mg-upcomming,
+        #dm-upcomming,
+        #gt-upcomming,
+        #gf1-upcomming,
+        #efterUdd-upcomming,
+        #værksted{
+            display: none;
+        }
+
+    </style>
+
+  </head>
+<body>
+    <main>
+        <nav>
+
+            <div onclick="myFunction();" class="burger-knap" >
+                <div class="burger-knap-dashes"></div>
+                <div class="burger-knap-dashes"></div>
+                <div class="burger-knap-dashes"></div>
+            </div>
+            <div id="dropdown">
+                <div id="x" onclick="myFunction();">
+                    <div class="x"></div>
+                    <div class="y"></div>
+                </div>
+                <div class="nav-kort nav-list"> <a href="">Kort</a></div>
+                <div class="nav-nyheder nav-list"><a href="">Nyheder</a></div>
+                <div class="nav-uddannelser nav-list"><a href="index.html">Start</a></div>
+            </div>   
+        </nav>
+
+        <section class="classIndex">
+            <div class="theClasses web">
+                <div class="edjucation-name">WEB</div>
+                <div class="dropdownTriangle" onclick="toggleFunction('web-upcomming');">
+                    <img src="assets/img/DropdownTriangle.svg"  alt="">
+                </div>
+            </div>
+
+            <div id="web-upcomming" >
+                <div class="upcomming">
+                    <div class="room-upcomming">N230</div>
+                    <div class="time-upcomming">12:30</div>
+                    <div class="subjectName-upcomming">Advanceret frontend design</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N230</div>
+                    <div class="time-upcomming">13:30</div>
+                    <div class="subjectName-upcomming">Apps</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N230</div>
+                    <div class="time-upcomming">14:30</div>
+                    <div class="subjectName-upcomming">Apps</div>
+                </div>
+            </div>
+            
+            <div class="theClasses mg">
+                <div class="edjucation-name">MG</div>
+                <div class="dropdownTriangle" onclick="toggleFunction('mg-upcomming');">
+                    <img src="assets/img/DropdownTriangle.svg" alt="">
+                </div>
+            </div>
+            <div id="mg-upcomming">
+                <div class="upcomming">
+                    <div class="room-upcomming">N220</div>
+                    <div class="time-upcomming">12:30</div>
+                    <div class="subjectName-upcomming">Billede redigering</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N220</div>
+                    <div class="time-upcomming">13:30</div>
+                    <div class="subjectName-upcomming">Billede redigering</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N220</div>
+                    <div class="time-upcomming">14:30</div>
+                    <div class="subjectName-upcomming">Billede redigering</div>
+                </div>
+            </div>
+            <div class="theClasses dm">
+                <div class="edjucation-name">DM</div>
+                <div class="dropdownTriangle" onclick="toggleFunction('dm-upcomming')">
+                    <img src="assets/img/DropdownTriangle.svg" alt="">
+                </div>
+            </div>
+            <div id="dm-upcomming">
+                <div class="upcomming">
+                    <div class="room-upcomming">N215</div>
+                    <div class="time-upcomming">12:30</div>
+                    <div class="subjectName-upcomming">Video redigering</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N215</div>
+                    <div class="time-upcomming">13:30</div>
+                    <div class="subjectName-upcomming">Video redigering</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N215</div>
+                    <div class="time-upcomming">14:30</div>
+                    <div class="subjectName-upcomming">Video redigering</div>
+                </div>
+            </div>
+            <div class="theClasses gt">
+                <div class="edjucation-name">GT</div>
+                <div class="dropdownTriangle" onclick="toggleFunction('gt-upcomming')">
+                    <img src="assets/img/DropdownTriangle.svg" alt="">
+                </div>
+            </div>
+            <div id="gt-upcomming">
+                <div class="upcomming">
+                    <div class="room-upcomming">N120</div>
+                    <div class="time-upcomming">12:30</div>
+                    <div class="subjectName-upcomming">Storformat</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N120</div>
+                    <div class="time-upcomming">13:30</div>
+                    <div class="subjectName-upcomming">Storformat</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N120</div>
+                    <div class="time-upcomming">14:30</div>
+                    <div class="subjectName-upcomming">Storformat</div>
+                </div>
+            </div>
+            <div class="theClasses ekstern">
+                <div class="edjucation-name">GF1</div>
+                <div class="dropdownTriangle" onclick="toggleFunction('gf1-upcomming')">
+                    <img src="assets/img/DropdownTriangle - Kopi.svg" alt="">
+                </div>
+            </div>
+            <div id="gf1-upcomming">
+                <div class="upcomming">
+                    <div class="room-upcomming">N110</div>
+                    <div class="time-upcomming">12:30</div>
+                    <div class="subjectName-upcomming">Introduktion til web</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N110</div>
+                    <div class="time-upcomming">13:30</div>
+                    <div class="subjectName-upcomming">Introduktion til web</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">N110</div>
+                    <div class="time-upcomming">8:15</div>
+                    <div class="subjectName-upcomming">Introduktion til servere</div>
+                </div>
+            </div>
+            <div class="theClasses ekstern">
+                <div class="edjucation-name">Efter udd.</div>
+                <div class="dropdownTriangle" onclick="toggleFunction('efterUdd-upcomming')">
+                    <img src="assets/img/DropdownTriangle - Kopi.svg" alt="">
+                </div>
+            </div>
+            <div id="efterUdd-upcomming">
+                <div class="upcomming">
+                    <div class="room-upcomming">N210</div>
+                    <div class="time-upcomming">12:30</div>
+                    <div class="subjectName-upcomming">Intro til redigering af billeder</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming"></div>
+                    <div class="time-upcomming"></div>
+                    <div class="subjectName-upcomming">Ikke flere timer</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming"></div>
+                    <div class="time-upcomming"></div>
+                    <div class="subjectName-upcomming">Ikke flere timer</div>
+                </div>
+            </div>
+            <div class="theClasses ekstern">
+                <div class="edjucation-name">Værksted</div>
+                <div class="dropdownTriangle" onclick="togglefunction('værksted')">
+                    <img src="assets/img/DropdownTriangle - Kopi.svg" alt="">
+                </div>
+            </div>
+            <div id="værksted">
+                <div class="upcomming">
+                    <div class="room-upcomming">N125</div>
+                    <div class="time-upcomming">8:15</div>
+                    <div class="subjectName-upcomming">Farveblanding</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">10:20</div>
+                    <div class="time-upcomming">N129</div>
+                    <div class="subjectName-upcomming">Udskæring af print</div>
+                </div>
+                <div class="upcomming">
+                    <div class="room-upcomming">11:20</div>
+                    <div class="time-upcomming">N129</div>
+                    <div class="subjectName-upcomming">Udskæring af print</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="assets/js/animations.js"></script>
+<script>
+    function toggleFunction(classes) {
+        let x = document.getElementById(classes);
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Element</title>
+</head>
+<body>
+    <form>
+        <select id="framework">
+            <option>Angular</option>
+            <option>React</option>
+            <option>Vue.js</option>
+            <option>Ember.js</option>
+        </select>
+        <button id="btn">Get the Selected Index</button>
+    </form>
+
+    <!-- <select multiple>
+        <option value="1">Angular</option>
+        <option value="2">React</option>
+        <option value="3">Vue.js</option>
+        <option value="4">Ember.js</option>
+    </select> -->
+</body>
+<script>
+    const btn = document.querySelector('#btn');
+        const sb = document.querySelector('#framework')
+        btn.onclick = (event) => {
+            event.preventDefault();
+            // show the selected index
+            alert(sb.value);
+            // alert(sb.selectedIndex);
+        };
+</script>
+</html>

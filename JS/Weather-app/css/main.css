@@ -1,0 +1,122 @@
+body {
+  font-family: sans-serif;
+}
+
+#wrapper {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+#Output {
+  background: #667db6;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#667db6), color-stop(#0082c8), color-stop(#0082c8), to(#667db6));
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 350px;
+  border-radius: 10px;
+  margin: auto;
+  padding: 5px;
+}
+
+#userInput[type=text] {
+  width: 65%;
+  padding: 6px 10px;
+  margin: 8px 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#sendForm[type=submit] {
+  width: 30%;
+  background-color: white;
+  color: black;
+  padding: 7px 10px;
+  margin: 8px 5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.weatherAnimation {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+}
+
+#information {
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  font-size: 20px;
+}
+
+#weatherAnimation {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  text-align: center;
+}
+
+.information {
+  padding: 10px 20px;
+  text-align: center;
+  border-top: 1px solid #dfdfdf;
+}
+
+@media (min-width: 768px) {
+  .information {
+    border-top: 1px solid #dfdfdf;
+  }
+}
+
+@media (min-width: 768px) {
+  .information {
+    border-top: 1px solid #dfdfdf;
+  }
+  .information:nth-child(-n+2) {
+    border-top: none;
+  }
+  .information:nth-child(odd) {
+    border-left: none;
+  }
+  .information:last-child {
+    border-bottom: 1px solid #dfdfdf;
+  }
+}
+
+.DivRotate {
+  -webkit-animation-name: SunRay1;
+          animation-name: SunRay1;
+  -webkit-animation-duration: 8.5s;
+          animation-duration: 8.5s;
+  position: relative;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+@-webkit-keyframes SunRay1 {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes SunRay1 {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */

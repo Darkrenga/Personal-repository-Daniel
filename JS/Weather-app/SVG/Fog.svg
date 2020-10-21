@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 80 80" style="enable-background:new 0 0 80 80;" xml:space="preserve">
+	<style>
+	#FogCloud{fill:#898480;}
+
+#Fog1, #Fog2, #Fog3{
+    fill:#FFFFFF;
+    stroke:#000000;
+    stroke-miterlimit:10;
+    position: relative;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#Fog1{
+    animation-name: fog;
+    animation-delay: 2.5s;
+    transform: translateX(-12px);   
+}
+#Fog2{
+    animation-name: fog2;
+}
+#Fog3{
+    animation-name: fog3;
+    animation-delay: 0.75s;
+}
+
+@keyframes fog{
+    0% { transform: translateX(-12px) }
+    100% { transform: translateX(12px) }
+}
+@keyframes fog2{
+    0% { transform: translateX(-12px) }
+    100% { transform: translateX(12px) }
+}
+@keyframes fog3{
+    0% { transform: translateX(12px) }
+    100% { transform: translateX(-12px) }
+}
+
+</style>
+
+
+<g>
+	<path id="Fog3" class="st0" d="M66.22,76H15.61c-0.47,0-0.86-0.39-0.86-0.86v-0.48c0-0.47,0.39-0.86,0.86-0.86h50.61
+		c0.47,0,0.86,0.39,0.86,0.86v0.48C67.08,75.61,66.69,76,66.22,76z"/>
+	<path id="Fog1" class="st0" d="M65.78,66.33H15.17c-0.47,0-0.86-0.39-0.86-0.86v-0.48c0-0.47,0.39-0.86,0.86-0.86h50.61
+		c0.47,0,0.86,0.39,0.86,0.86v0.48C66.64,65.94,66.25,66.33,65.78,66.33z"/>
+	<path id="Fog2" class="st0" d="M66.22,71.16H15.61c-0.47,0-0.86-0.39-0.86-0.86v-0.48c0-0.47,0.39-0.86,0.86-0.86h50.61
+		c0.47,0,0.86,0.39,0.86,0.86v0.48C67.08,70.78,66.69,71.16,66.22,71.16z"/>
+</g>
+<path id="FogCloud" class="st0" d="M60.04,21.51c0-0.09,0.01-0.17,0.01-0.26C60.04,11.17,51.87,3,41.79,3s-18.25,8.17-18.25,18.25
+	c0,0.08,0,0.15,0.01,0.3c-0.08,0-0.15-0.01-0.23-0.01c-10.08,0-18.25,8.17-18.25,18.25c0,9.26,6.9,16.9,15.83,18.09v0.08h0.63
+	c0.59,0.06,1.18,0.09,1.78,0.09c0.6,0,1.2-0.03,1.78-0.09h31.86v-0.02c0.65,0.07,1.31,0.11,1.98,0.11
+	c10.08,0,18.25-8.17,18.25-18.25C77.19,30.01,69.61,22.07,60.04,21.51z"/>
+</svg>

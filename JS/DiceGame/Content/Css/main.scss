@@ -1,0 +1,118 @@
+$red: red;
+$amount: 50%;
+
+html{
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    
+    font-family: 'Indie Flower', cursive;
+    color: wheat;
+  }
+  
+  html, body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  body {
+    background-image: url("../Images/table.jpg");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .overskrift{
+    width: 61%;
+    text-align: center;
+  }
+  //hej
+  h1{
+    font-size: 6rem;
+    border-radius: 25px;
+    padding: 15px;
+    background-color: blueviolet;
+    color: #303004;
+    box-shadow: (8px 8px 10px wheat);
+    text-shadow: (2px 2px 8px wheat);
+}
+h2{
+  font-size: 2rem;
+}
+.gameBoard{
+  display: flex;
+  align-items: center;
+  
+}
+.dice {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 5px 15px 0;
+  width: 200px;
+  height: 200px;
+}
+.gameBoard{
+  width: 100%;
+  justify-content: space-evenly;
+}
+.results{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.st0{
+  fill: red;
+}
+.st1{
+  fill: none;
+}
+
+#die1, #die2, #die3, #die4 {
+  filter: drop-shadow( 8px 8px 5px wheat);
+  padding: 10px;
+}
+button {
+    padding: 1rem;
+    margin: 4rem 1rem 0 1rem;
+    width: 200px;
+    border: 3px solid wheat;
+  color: wheat;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 6px 6px 10px wheat;
+  &:hover{
+    background-color: #cc0000;
+  }
+  }
+button:active{
+  padding: 14.5px 0 14.5px 0;
+  box-shadow: 2px 2px 8px wheat;
+} 
+#spil{
+  background-color: red;
+  border-radius: 20px 50px ;
+}
+#reset{
+  background-color: blueviolet;
+  border-radius: 50px 20px;
+}
+#reset:hover{
+  background-color: #4e1287;
+}
+#spil:hover {
+  background-color: #cc0000;
+}

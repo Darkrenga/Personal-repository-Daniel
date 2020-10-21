@@ -1,0 +1,16 @@
+main{
+    margin: 200px auto;
+    width: 1200px;
+    text-align: center;
+}
+
+#grid{
+    margin: auto;
+    width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#tall{
+    grid-row: 1/3;
+    font-size: 40px;
+}

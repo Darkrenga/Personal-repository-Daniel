@@ -1,0 +1,13 @@
+{
+    "name": "Progressive Web App Startup",
+    "short_name": "PWA Startup",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#123456",
+    "theme_color": "#123456",
+    "icons": [{
+        "src": "assets/img/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }]
+}

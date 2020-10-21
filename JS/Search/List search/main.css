@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+}
+
+#myInput{
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 2px solid rgb(32, 31, 31); /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#information article{
+    border: 1px solid rgb(32, 31, 31);
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 4fr 3fr 3fr;
+}
+
+.tags p{
+    width: 120px;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#information article p{
+  font-size: 18px;
+  color: black;
+  display: inline-block;  
+}
+
+#information div p{
+    font-size: 18px;
+    color: black;
+    display: inline-block ;
+  }
+
+
+.countryNname{
+    display: grid;
+    grid-template-columns: 4fr 3fr 3fr;
+}
+

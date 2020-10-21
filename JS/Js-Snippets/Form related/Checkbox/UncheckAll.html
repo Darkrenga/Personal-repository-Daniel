@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncheck/Check All</title>
+</head>
+<body>
+    <button id="btn">Check / uncheck All</button>
+    <input type="checkbox" name="color" value="red"> Red
+    <input type="checkbox" name="color" value="green"> Green
+    <input type="checkbox" name="color" value="Blue"> Blue
+</body>
+<script>
+    function check(checked = true) {
+        const cbs = document.querySelectorAll('input[name="color"]');
+        cbs.forEach((cb) => {
+            cb.checked = checked;
+        });
+    }
+    
+    const btn = document.querySelector('#btn');
+    btn.onclick = checkAll;
+
+    function checkAll() {
+        check();
+        //switches Event handler
+        this.onclick = uncheckAll;
+    }
+
+    function uncheckAll() {
+        check(false);
+        // reassign click event handler
+        this.onclick = checkAll;
+    }
+
+</script>
+</html>

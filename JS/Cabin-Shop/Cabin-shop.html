@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    html{
+        font-family: sans-serif;
+    }
+img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+#wrapper{
+    width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.wrapper{
+    background-color: #ddd;
+    box-shadow: 12px 15px 14px -9px rgba(0,0,0,0.33);
+}
+.size, .desc, .prize{
+    margin: 5px 10px ;
+}
+
+.prize{
+margin-bottom: 10px;
+}
+h1{
+    width: 1200px;
+    margin: auto auto 30px auto;
+    text-align: center;
+    font-size: 50px;   
+    
+}
+</style>
+</head>
+<body>
+<h1>SkovHytterne</h1>
+<p id="wrapper"></p>
+
+</body>
+<script src="js/Cabin-shop-js.js"></script>
+</html>

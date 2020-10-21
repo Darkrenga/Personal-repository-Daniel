@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        .card{
+            width: 300px;
+            background-color: rgba(191, 197, 202, 0.2);
+            -webkit-box-shadow: 10px 10px 24px -14px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 24px -14px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 24px -14px rgba(0,0,0,0.75);
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="myInput" onkeyup="searchBy(0)" placeholder="Search for something...">
+    <!-- <section id="information">
+        <article id="article">
+            <p>Maya</p>
+            <p>Serbien</p>
+        </article>
+        <article id="article">
+            <p>Babuska</p>
+            <p>Rusland</p>
+        </article>
+    </section> -->
+
+
+    <section id="wrapper">
+        <article class="card">
+            <img src="https://via.placeholder.com/300x200" alt="">
+            <h3 class="cardTitle">Search List</h3>
+            <div class="cardInfo">
+                <p class="cardAuthor">Daniel Jensen</p>
+                <p class="cardUpload">17-10-2020</p>
+            </div>
+            <footer class="cardTags">
+                <p class="cardTag">HTML</p>
+                <p class="cardTag">CSS</p>
+                <p class="cardTag">JS</p>
+            </footer>
+        </article>
+
+        <article class="card">
+            <img src="https://via.placeholder.com/300x200" alt="">
+            <h3 class="cardTitle">React StartUp</h3>
+            <div class="cardInfo">
+                <p class="cardAuthor">Daniel Jensen</p>
+                <p class="cardUpload">5-7-2020</p>
+            </div>
+            <footer class="cardTags">
+                <p class="cardTag">JS</p>
+                <p class="cardTag">REACT</p>
+                <p class="cardTag">CSS</p>
+            </footer>
+        </article>
+
+        <article class="card">
+            <img src="https://via.placeholder.com/300x200" alt="">
+            <h3 class="cardTitle">Blank</h3>
+            <div class="cardInfo">
+                <p class="cardAuthor">Blank</p>
+                <p class="cardUpload">Blank</p>
+            </div>
+            <footer class="cardTags">
+                <p class="cardTag">Blank</p>
+                <p class="cardTag">Blank</p>
+                <p class="cardTag">Blank</p>
+            </footer>
+        </article>
+    </section>
+    
+
+</body>
+<script src="JS/test.js"></script>
+</html>

@@ -1,0 +1,95 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 400px;
+    margin: auto;
+}
+
+button{
+    padding: 10;
+    background: none;
+    border: #ddd solid 1px;
+}
+
+#display{
+    grid-column: 1/13;
+}
+
+#ce{
+    grid-column: 1/4;
+}
+#c{
+    grid-column: 4/7;
+}
+#slet{
+    grid-column: 7/10;
+}
+
+#divider{
+
+    grid-column: 10/13;
+}
+
+#Gange{
+    grid-column: 10/13 ;   
+}
+
+#Minus{
+    grid-column: 10/13 ;   
+}
+
+#plus{
+    grid-column: 10/13 ;   
+}
+
+#syv{
+    grid-column: 1/4     ;   
+}
+
+#otte{
+    grid-column: 4/7 ;   
+}
+
+#ni{
+    grid-column: 7/10 ;   
+}
+
+#fire{
+    grid-column: 1/4 ;   
+}
+
+#fem{
+    grid-column: 4/7 ;   
+}
+
+#seks{
+    grid-column: 7/10 ;   
+}
+
+#et{
+    grid-column: 1/4 ;   
+}
+
+#to{
+    grid-column: 4/7 ;   
+}
+
+#tre{
+    grid-column: 7/10 ;   
+}
+
+#positiv-negativ{
+    grid-column: 1/4 ;   
+}
+
+#nul{
+    grid-column: 4/7 ;   
+}
+
+#Komma{
+    grid-column: 7/10 ;   
+}
+
+#lig-med{
+    grid-column: 10/13 ;   
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Tester</title>
+
+</head>
+
+<body>
+    
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for something? no?" />
+
+    <section id="information">
+
+    </section>
+
+</body>
+<script src="JS/dom.js"></script>
+<script>
+//Creating my variables
+let input, filter, section, article, div, i, txtValue;
+
+function searchFunction() {
+    //Asigning my input to input
+    input = document.getElementById('myInput');
+
+    //Filter is my search value, so its assigned to the value of input
+    //Removing toUpperCase makes it case sensitive. You need to do it both places for that
+    filter = input.value.toUpperCase();
+
+    //Assigning section to my section
+    section = document.getElementById("information");
+
+    //Get all my articles in an array in articles
+    article = section.getElementsByTagName("article");
+    
+    //Creating a for loop that loops through article
+    for (i = 0; i < article.length; i++) {
+
+        //Assign the tags to div
+        div = article[i].getElementsByClassName("tags")[0];
+
+        //txtValue is either theContent or innerText of div, which means this holds the value of my tags
+        txtValue = div.textContent || div.innerText;
+        
+
+        // console.log(txtValue.toUpperCase().indexOf(filter)); //For showing
+        //Runs an if statement that says. If the value of filter exist in txtValue, make the display default or else make it none
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            article[i].style.display = "";
+        } else {
+            article[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+</html>

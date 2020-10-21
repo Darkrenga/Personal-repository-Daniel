@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox" name="color" value="red"> Red <br>
+        <input type="checkbox" name="color" value="green"> Green <br>
+        <input type="checkbox" name="color" value="blue"> Blue <br>
+        <input type="button" id="btn" value="Submit">
+    </form>
+</body>
+<script>
+    function getSelectedCheckboxValues(name) {
+    const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+    return values;
+}
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', (event) => {
+    alert(getSelectedCheckboxValues('color'));
+});
+</script>
+</html>

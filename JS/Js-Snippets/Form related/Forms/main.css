@@ -1,0 +1,7 @@
+form input.error{
+    border-color: #e74c3c;
+}
+
+form input.success {
+    border-color: #c3e6cb
+}
