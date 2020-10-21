@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
     <title>SearchAll</title>
-    
-
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    
-    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search something, or don't. I'm not your dad">
 
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search something, or don't. I'm not your dad">
+    
     <section id="information">
     </section>
 
 </body>
 <script src="JS/dom.js"></script>
 <script>
-    let input, filter, section, article, div, i, txtValue;
+    let input, filter, section, article, div, p, i, txtValue;
 
-    function searchFunction() {
-        input = document.getElementById('myInput');
-        filter = input.value.toUpperCase();
-        section = document.getElementById('information');
-        article = section.getElementsByTagName('article');
+function searchFunction() {
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    section = document.getElementById('information');
+    article = section.getElementsByTagName('article');
 
-        for (i = 0; i < article.length; i++) {
-             txtValue = article[i].textContent || article[i].innerText;
-             if(txtValue.toUpperCase().indexOf(filter) > -1) {
-                 article[i].style.display = "";
-             } else {
-                article[i].style.display = "none";
-             }
+    for (i = 0; i < article.length; i++) {
+        txtValue = article[i].textContent;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            article[i].style.display = "";
+        } else {
+            article[i].style.display = "none";
         }
     }
+}
 </script>
-
 </html>

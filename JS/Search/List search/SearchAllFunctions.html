@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>SearchAll</title>
+    
+
+</head>
+<body>
+    
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search something, or don't. I'm not your dad">
+    
+    <input type="radio" name="choice" value="All" id="All" checked>
+    <label for="All">Search by All</label>
+
+    <input type="radio" name="choice" value="Tags" id="Tags">
+    <label for="Tags">Search by Tags</label>
+
+    <input type="radio" name="choice" value="Name" id="Name">
+    <label for="Name">Search by Name</label>
+
+    <input type="radio" name="choice" value="Country" id="Country">
+    <label for="Country">Search by Country</label>
+    <br>
+    <br>
+
+    <section id="information">
+    </section>
+
+</body>
+<script src="JS/dom.js"></script>
+<script>
+    let input, filter, section, article, div, p, i, txtValue;
+
+    function searchFunction() {
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        section = document.getElementById('information');
+        article = section.getElementsByTagName('article');
+
+        const rbs = document.querySelectorAll('input[name="choice"]');
+        let selectedValue;
+        for (const rb of rbs) {
+            if(rb.checked) {
+                selectedValue = rb.value;
+                break;
+            } else {
+                selectedValue = "All";
+            }
+        }
+
+        if(selectedValue == "Tags") {
+            searchTags();
+        } else if(selectedValue == "All") {
+            searchAll();
+        } else if(selectedValue == "Country") {
+            searchNameOrCountry(1);
+        } else if(selectedValue == "Name") {
+            searchNameOrCountry(0);
+        } else{
+            alert("Something very bad went wrong and I have no idea WHAT!")
+        }
+    }
+
+    function searchTags() {
+        for (i = 0; i < article.length; i++) {
+            div = article[i].getElementsByClassName("tags")[0];
+            txtValue = div.textContent || div.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                article[i].style.display = "";
+            } else {
+                article[i].style.display = "none";
+            }
+        }
+    }
+
+    function searchAll() {
+        for (i = 0; i < article.length; i++) {
+            txtValue = article[i].textContent || article[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                article[i].style.display = "";
+            } else {
+                article[i].style.display = "none";
+            }
+        }
+    }
+
+    function searchNameOrCountry(value) {
+        for (i = 0; i < article.length; i++) {
+            p = article[i].getElementsByTagName("p")[value];
+            txtValue = p.textContent || p.innerText;
+            if(txtValue.toUpperCase().indexOf(filter) > -1) {
+                article[i].style.display = "";
+            } else {
+                article[i].style.display = "none";
+            }
+        }
+    }
+
+</script>
+
+</html>
