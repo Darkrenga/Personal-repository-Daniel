@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS powered Clock</title>
+    <style>
+        div{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+    </div>
+</body>
+<script>
+
+    function currentTime() {
+        let today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = addZero(m);
+        s = addZero(s);
+
+        document.getElementById('wrapper').innerHTML = h + ":" + m + ":" + s;
+        let t = setTimeout(currentTime, 500);
+    }
+
+    function addZero(i) {
+        if (i < 10) {
+            i = "0" + i
+        };
+        return i;
+    }
+
+    currentTime();
+
+</script>
+</html>
