@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Age Calculator</title>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <input type="text" id="userIn">
+        <button id="send">Add</button>
+        <button id="logAges">Console.log</button>
+        <button id="calculate">Calculate</button>
+    </div>
+    
+</body>
+<script>
+
+const ages = [];
+
+document.getElementById('send').onclick = function() {
+    let newAge = document.getElementById('userIn').value;
+    ages.push(newAge);
+}
+
+document.getElementById('logAges').onclick = function() {
+    console.log(ages);
+}
+
+
+let totalAge = 0;
+document.getElementById('calculate').onclick = function() {
+    for (let i = 0; i < ages.length; i++) {
+        console.log(ages[i]);
+    }
+}
+</script>
+</html>
