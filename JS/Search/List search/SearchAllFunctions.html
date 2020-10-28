@@ -34,6 +34,8 @@
 <script>
     let input, filter, section, article, div, p, i, txtValue;
 
+
+    //===========================    View   ================================//
     function searchFunction() {
         input = document.getElementById('myInput');
         filter = input.value.toUpperCase();
@@ -64,6 +66,7 @@
         }
     }
 
+
     function searchTags() {
         for (i = 0; i < article.length; i++) {
             div = article[i].getElementsByClassName("tags")[0];
@@ -76,6 +79,7 @@
         }
     }
 
+    
     function searchAll() {
         for (i = 0; i < article.length; i++) {
             txtValue = article[i].textContent || article[i].innerText;

@@ -15,6 +15,10 @@ const names = [
     ["Mohammed", "Norge","HTML", "JS", "CSS"],
     ["Jens", "Afghanistan","HTML", "JS", "FIREBASE"],
     ["Maya", "Serbien","HTML", "SEO", "CSS"],
+    ["Søren", "Langbortistan", "HTML", "ANGULAR", "CSS"],
+    ["Tim", "Malorca Bar", "HTML", "SEO", "CSS"],
+    ["Sarangan", "Inde på GF2", "ANGULAR", "REACT", "JS"],
+    ["Heinz", "Ligger og soler sig på Gran Canaria", "JS", "!CSS", "PHP"],
 ];
 
 
