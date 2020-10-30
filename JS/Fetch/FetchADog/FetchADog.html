@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FetchieDoggie</title>
+    
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    //==========   Controller ==========//
+    let myFetchedData = loadData('https://dog.ceo/api/breeds/image/random');
+
+
+    function loadData(apiUrl) {
+        console.log("Fetching me data");
+
+        fetch(apiUrl)
+
+        .then((response) => {
+            return respone.json();
+        })
+        .then((data) => {
+            buildView(data.message);
+        })
+
+        .catch(
+        );
+    }
+
+
+    //========   VIEW   ==========//
+    let app = document.getElementById("hund");
+
+    function buildView(myImgUrl) {
+        
+    }
+
+</script>
+</html>

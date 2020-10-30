@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FetchDeDog</title>
+</head>
+<body>
+    <div id="hund">
+
+    </div>
+</body>
+<script>
+
+const key = "4361ea2c64ac4866a601953e58bd2a46";
+
+const asyncFetch = async (url) => {
+    const response = await fetch(url);
+    const json = await response.json();
+    return json;
+}
+
+
+function getAllData() {
+    const url = `http://api.weatherbit.io/v2.0/current?city=Aalborg&key=${key}`;
+    asyncFetch(url).then(function(response){
+        let allData = response.data[0];
+        let div;
+        console.log( "allData is : " + allData);
+        Object.keys(allData).forEach(function(key) {
+            console.log[key, allData[key]];
+            key = [key]
+            val = [allData[key]];
+            div = document.createElement('div');
+            div.append(key + " : " + val);
+            document.body.append(div);
+        })
+    })
+}
+
+function getSelectCity(value){
+    const url = "http://api.weatherbit.io/v2.0/current?city="+value+"&key="+key+"";
+    asyncFetch(url).then(function(response){
+        let allData = response.data[0];
+        let div;
+        console.log( "allData is : " + allData);
+        Object.keys(allData).forEach(function(key) {
+        console.log[key, allData[key]];
+        key = [key];
+        val = [allData[key]];
+        div = document.createElement('div');
+        div.append(key + " : " + val);
+        document.body.append(div);
+        })
+    })
+}
+
+function getSpecificData(value){
+    const url = "http://api.weatherbit.io/v2.0/current?city=Aalborg&key="+key+"";
+    asyncFetch(url).then(function(response){
+        let allData = response.data[0];
+        let div;
+        console.log( "allData is : " + allData);
+        Object.keys(allData).forEach(function(key) {
+        console.log[key, allData[key]];
+        key = [key];
+        val = [allData[key]];
+        if (key == value){
+        div = document.createElement('div');
+        div.append(key + " : " + val);
+        document.body.append(div);
+        }
+        })
+    })
+}
+
+function getSpecificDataByCity(value, city){
+    const url = "http://api.weatherbit.io/v2.0/current?city="+city+"&key="+key+"";
+    asyncFetch(url).then(function(response){
+        let allData = response.data[0];
+        let div;
+        console.log( "allData is : " + allData);
+        Object.keys(allData).forEach(function(key) {
+        console.log[key, allData[key]];
+        key = [key];
+        val = [allData[key]];
+        if (key == value){
+        div = document.createElement('div');
+        div.append(key + " : " + val);
+        document.body.append(div);
+        }
+        })
+    })
+}
+
+getSpecificDataByCity("city_name", "Paris");
+getAllData();
+</script>
+</html>
