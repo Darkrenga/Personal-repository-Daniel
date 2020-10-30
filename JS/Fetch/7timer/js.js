@@ -1,11 +1,21 @@
-//Global variables
+//Commented most of the console.log outs for reasons related to 
+
+//=========================   Global Variables   =========================//
 let output = document.getElementById('vejret');
 
 
-//add stylesheet
-    //FontSizer
+//=========================   adding css - view   =========================//
+let cssLink = 'main.css'; //Where the css is located
 
-//Loader
+let head = document.getElementsByTagName('head')[0];
+let link = document.createElement('link');
+link.rel = 'stylesheet';
+link.type = 'text/css'
+link.href = cssLink;
+head.appendChild(link);
+
+
+//=========================   Loader - View  =========================//
 createLoading();
 
 function createLoading() {
@@ -18,15 +28,16 @@ function createLoading() {
     output.appendChild(title);
 }
 
-//Controller
+
+//=========================   Controller   =========================//
 let myData = fetchData('http://www.7timer.info/bin/api.pl?lon=9.922&lat=57.049&product=civillight&output=json')
 function fetchData(apiUrl) {
-    console.log("Starting da fetch");
+    // console.log("Starting da fetch");
 
     fetch(apiUrl)
     .then((res) => { return res.json(); })
     .then((data) => { 
-        console.log(data.dataseries[0]);
+        // console.log(data.dataseries[0]);
         let path = data.dataseries[0];
         let date = path.date;
         let weather = path.weather;
@@ -38,7 +49,8 @@ function fetchData(apiUrl) {
     .catch(  );
 }
 
-//View
+
+//=========================   View   =========================//
 function createView(hightemp, mintemp, weather) {
     //Getting my output and clearing it
     output.innerHTML = "";
@@ -54,7 +66,9 @@ function createView(hightemp, mintemp, weather) {
     //Skaber Temperatur wrapper og de 2 elementer der skal være i den
     let temp = document.createElement("div");
     let min = document.createElement("p");
+    min.setAttribute('class', 'weatherP');
     let max = document.createElement("p");
+    max.setAttribute('class',' weatherP');
 
     //Sætter tekst ind i min temperatur elementer
     min.innerHTML = "Laveste temperatur " + mintemp +'&degC';
@@ -96,7 +110,7 @@ function createView(hightemp, mintemp, weather) {
 }
 
 
-//Making Date
+//=========================   Date adder - view   =========================//
 function dateConvertion(weirdDateFormat) {
     let num = weirdDateFormat;
 
@@ -121,16 +135,5 @@ function dateConvertion(weirdDateFormat) {
     let dateOut = document.getElementById('weatherDate');
     dateOut.innerHTML = arr[dateOfTheWeek];
     
-    console.log(arr[dateOfTheWeek]);
-
-
-    
-
-    // let digits = num.toString().split('');
-    // let realDigits = digits.map(Number)
-    // console.log(realDigits);
-    // let poggers = "" + realDigits[0] + realDigits[1] + realDigits[2] + realDigits[3];
-    // console.log(poggers);
-
-    
+    // console.log(arr[dateOfTheWeek]);
 }
