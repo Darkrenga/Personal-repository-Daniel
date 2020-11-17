@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: auto;
+            margin-top: 200px;
+            text-align: center;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="output">
+        0
+    </div>
+</body>
+<script>
+    let output = document.getElementById('output');
+    let i = 1;
+    
+        setInterval(() => {
+            if(i <= 100){
+            output.innerHTML = "Days Since The Apocolypse: " + i;
+            i++;
+            }
+            //I'm the interval at which the number will update
+        }, 400);
+    
+</script>
+</html>
