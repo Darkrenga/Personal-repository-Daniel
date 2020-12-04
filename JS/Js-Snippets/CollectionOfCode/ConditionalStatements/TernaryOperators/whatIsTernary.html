@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+    //This
+    let age;
+    let canDrive;
+
+    if(age > 16) {
+        canDrive = true;
+    } else {
+        canDrive = false;
+    }
+
+    //Is the same as
+    age = 19;
+    canDrive = age > 16 ? true : false;
+
+    //Syntax goes like this
+    let condition, expression_1, expression_2;
+    condition ? expression_1 : expression_2;
+
+    //This is basically an if else statement, if its true its express 1 if else its express 2
+
+    //The most normal way to use ternary operators was in ES5 to set default values to params
+    function foo(bar) {
+        bar = typeof(bar) !== 'undefined' ? bar : 10
+        return bar;
+    }
+
+    console.log(foo());
+    console.log(foo(20));
+
+    //This has been elimated though due too ES6 adding default values in
+    function foO(bar = 10){
+        return bar
+    }
+
+    console.log(foO());
+    console.log(foO(20));
+
+</script>
+</html>

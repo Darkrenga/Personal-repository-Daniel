@@ -19,9 +19,7 @@
 ];
 
 function royalNames(value) {
-    if (value.royal){
-        return value
-    }
+    return value.royal == false;
 }
 
 let filtered = obj.filter(royalNames)
