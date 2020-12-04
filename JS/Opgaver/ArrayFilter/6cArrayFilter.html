@@ -23,12 +23,10 @@ let cars = [
 ];
 
     function filterByMinPriceMaxKml(value) {
-        if(value.price > 200000) {
-            if(value.kml > 15){
-                return value
-            }
-        }
+        return value.price > 200000 && value.kml > 15
     }
+
+    
 
     let filtered = cars.filter(filterByMinPriceMaxKml)
     console.log(filtered);

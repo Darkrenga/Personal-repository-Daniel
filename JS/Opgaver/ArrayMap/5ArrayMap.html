@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    let array = [{
+        name: "Mads Mikkelsen",
+        age: 80
+    },
+    {
+        name: "Sofie Gråbøl",
+        age: 2
+    },
+    {
+        name: "Sidse Babett Knudsen",
+        age: 5
+    },
+    {
+        name: "Nikolaj Lie Kaas",
+        age: 16
+    },
+    {
+        name: "Frank Hvam",
+        age: 100
+    }]
+    let mapped = array.map(item => {
+        let newStatement = item.name;
+        newStatement += item.age > 18 ? ' er gammel nok' : ' er IKKE gammel nok';
+        return newStatement
+    })
+
+
+    console.log(mapped);
+
+</script>
+</html>
