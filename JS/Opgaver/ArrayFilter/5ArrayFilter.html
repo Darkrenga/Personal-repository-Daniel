@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let people = [
+    { name: "Mette Frederiksen", age: 80 },
+    { name: "Jakob Elleman", age: 2 },
+    { name: "Søren Pape", age: 5 },
+    { name: "Pia Olsen Dyhr", age: 16 },
+    { name: "Pernille Skipper", age: 100 },
+    { name: "Kristian Thulesen Dahl", age: 54 }
+];
+
+    function ofAge(value) {
+        if(value.age > 18) {
+            return value
+        }
+    }
+
+    let filtered = people.filter(ofAge);
+    console.log(filtered);
+
+</script>
+</html>

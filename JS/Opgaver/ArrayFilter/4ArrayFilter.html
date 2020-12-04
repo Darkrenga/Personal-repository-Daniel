@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    let obj = [
+            { name: "Mette", royal: false },
+            { name: "Magrethe", royal: true },
+            { name: "Jakob", royal: false },
+            { name: "Mary", royal: true },
+            { name: "Frederik", royal: true }
+];
+
+function royalNames(value) {
+    if (value.royal){
+        return value
+    }
+}
+
+let filtered = obj.filter(royalNames)
+console.log(filtered);
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let testEl = document.createElement( "video" ),
+    mpeg4, h264, ogg, webm;
+
+    if ( testEl.canPlayType ) {
+        // Check for MPEG-4 support
+        mpeg4 = "" !== testEl.canPlayType( 'video/mp4; codecs="mp4v.20.8"' );
+
+        // Check for h264 support
+        h264 = "" !== ( testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E"' )
+            || testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ) );
+
+        // Check for Ogg support
+        ogg = "" !== testEl.canPlayType( 'video/ogg; codecs="theora"' );
+
+        // Check for Webm support
+        webm = "" !== testEl.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
+    }
+    
+    console.log(testEl.canPlayType);
+</script>
+</html>

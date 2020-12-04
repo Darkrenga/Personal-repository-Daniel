@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-wrapper{
+            display: flex;
+            background-color: beige;
+        }
+        .flex-wrapper > div {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-wrapper">
+        <div id="One">Header</div>
+        <div id="Two">Nav</div>
+        <div id="Three">Content</div>
+        <div id="Four">Footer</div>
+    </div>
+</body>
+</html>

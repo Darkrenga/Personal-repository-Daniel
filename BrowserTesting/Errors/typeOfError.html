@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Page</h1>
+<div id="app"></div>
+<br />
+<div id="error"></div>
+</body>
+<script>
+let app = document.getElementById("app");
+
+    function isNumber(checkMe) {
+        res = typeof checkMe;
+
+        if (res == "number") {
+            return {  result: true, message: "I am a number"  }
+        } else {
+            return {  result: false, message: 'I am NaN'  }
+        }
+    }
+
+    function isBigint(checkMe) {
+        res = typeof checkMe;
+
+        if (res == "bigint") {
+            return {  result: true, message: "I am a bigint"  }
+        } else {
+            return {  result: false, message: 'I am not a bigint'  }
+        }
+    }
+
+    function isBoolean(checkMe) {
+        res = typeof checkMe;
+
+        if (res == "boolean") {
+            return {  result: true, message: "I am a boolean"  }
+        } else {
+            return {  result: false, message: 'I am not a boolean'  }
+        }
+    }
+
+    function isString(checkMe) {
+        res = typeof checkMe;
+
+        if (res == "string") {
+            return {  result: true, message: "I am a string"  }
+        } else {
+            return {  result: false, message: 'I am not a string'  }
+        }
+    }
+    
+    function isUndefined(checkMe) {
+        res = typeof checkMe;
+
+        if (res == "undefined") {
+            return {  result: true, message: "I am undefined"  }
+        } else {
+            return {  result: false, message: 'I am not  undefined'  }
+        }
+    }
+
+    function isObjects(checkMe) {
+        res = typeof checkMe;
+
+        if (res == "objects") {
+            return {  result: true, message: "I am an objects"  }
+        } else {
+            return {  result: false, message: 'I am not an objects'  }
+        }
+    }
+
+    function isFunction(checkMe) {
+        res = typeof checkMe;
+
+        if (res == "function") {
+            return {  result: true, message: "I am a function"  }
+        } else {
+            return {  result: false, message: 'I am not a function'  }
+        }
+    }
+
+    function isNull(checkMe) {
+        res = typeof checkMe;
+
+        if (res == "object") {
+            return {  result: true, message: "I am a null"  }
+        } else {
+            return {  result: false, message: 'I am not a null'  }
+        }
+    }
+
+
+
+    function isArray(checkMe) {
+        res = Array.isArray(checkMe);
+
+        if (res == true) {
+            return {  result: true, message: "I am an array"  }
+        } else {
+
+        }
+    }
+
+
+
+    function checkHttpOrHttps(url) {
+        if(url.indexOf('https') > -1) {
+            return {  result: true, message: "I am an image"  }
+
+        } else if (url.indexOf('http') > -1) {
+            return {  result: true, message: "I am an image, though not secure"  }
+        } else {
+            return {  result: false, message: "I am no an image"  }
+        }
+    }
+
+    function isUrl(url) {
+        if(isString(url).result) {
+            if(checkHttpOrHttps(url).result) {
+                if(url.split('://')[1] == undefined){
+                    errorMessage('You forgot ://');
+                } else {
+                    let spliturl = url.split('://')[1];
+                    if(spliturl.split('.')[0] == undefined) {
+                        errorMessage('You need to add a . Somewhere <br />');
+                    } else {
+                        if(url.indexOf('www') > -1) {
+                            if(spliturl.split('.')[1].length >= -1){
+                                let splitAgain = spliturl.split('.')[2];
+                                if(splitAgain.split('/')[0].length == 2 || splitAgain.split('/')[0].length == 3) {
+                                    return true;
+                                } else {
+                                    errorMessage('There was an issue after your last .');
+                                }
+                            } else {
+                                errorMessage('Failure somewhere between the . .');
+                            }
+                        } else {
+                            errorMessage("You're not sending me to the world wide web");
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+function checkForUrl (items){
+    for (const item of items) {
+        if(isUrl(item)){
+            app.innerHTML += item;
+        }
+    }
+}
+myArr = ['https://www.google.com'];
+checkForUrl(myArr);
+
+
+function errorMessage(message) {
+    let error = document.getElementById('error');
+    error.innerHTML += message + '<br />';
+}
+
+
+
+
+</script>
+</html>
