@@ -23,9 +23,7 @@
 ];
 
     function filterByName(value){
-        if (value.name === "Mercedes") {
-            return value
-        }
+        return value.name === "Mercedes"
     }
 
     let filtered = cars.filter(filterByName);

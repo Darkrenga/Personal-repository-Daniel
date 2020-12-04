@@ -23,9 +23,8 @@ let cars = [
 ];
 
 function priceGreaterThen200000(value){
-    if(value.price > 200000) {
-        return value
-    }
+    return value.price > 200000
+    
 }
 
 let filtered = cars.filter(priceGreaterThen200000);

@@ -20,9 +20,7 @@ let people = [
 ];
 
     function ofAge(value) {
-        if(value.age > 18) {
-            return value
-        }
+        return value.age > 18
     }
 
     let filtered = people.filter(ofAge);
